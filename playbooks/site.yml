@@ -1,3 +1,6 @@
 ---
 - hosts: all
 - import_playbook: ../static-assignments/common-del.yml
+
+
+# this is judt to have some chsnged in the repo

@@ -2,7 +2,7 @@
 
 - name: 
   hosts: uat-webservers
-  become: yes 
+  become: true 
   roles:          
-   - ../roles/webserver
+     - ../roles/webserver
      

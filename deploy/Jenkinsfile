@@ -23,13 +23,14 @@
     stage ( 'Prepare Ansible For Execution') {
       steps {
         sh 'echo $ {WORKSPACE}'
+        sh "ls -l ${WORKSPACE}/deploy"  // List files in the deploy directory
         sh 'sed -i "3 a roles_path-${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'
       }
     }
 
     stage('Run Ansible playbook') {
       steps {
-         ansiblePlaybook become: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: "inventory/dev", playbook: "playbooks/site.yml"
+         ansiblePlaybook become: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: "inventory/dev.yml", playbook: "playbooks/site.yml"
        }
     }
 

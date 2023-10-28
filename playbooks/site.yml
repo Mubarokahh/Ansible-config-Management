@@ -1,4 +1,4 @@
----
+--- 
 #- name: Include dynamic variables 
 #  hosts: all
 
@@ -23,6 +23,6 @@
 #  when: load_balancer_is_required
 
 
-  name: sonar assignment
-  hosts: sonar
-  ansible.builtin.import_playbook: ../static-assignments/sonar.yml
+ - name: sonar assignment
+ - hosts: sonar
+ - ansible.builtin.import_playbook: ../static-assignments/sonar.yml

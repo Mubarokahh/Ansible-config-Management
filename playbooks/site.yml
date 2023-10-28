@@ -12,7 +12,7 @@
 #   ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
 
   - hosts: sonar
-  - name: sonar assignment
+    name: sonar assignment
     ansible.builtin.import_playbook: ../static-assignments/sonar.yml
 
 #- hosts: todo

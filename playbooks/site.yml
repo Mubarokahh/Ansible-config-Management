@@ -1,4 +1,4 @@
---- 
+ --- 
 #- name: Include dynamic variables 
 #  hosts: all
 

@@ -22,6 +22,7 @@
 #  import_playbook: ../static-assignments/loadbalancer.yml
 #  when: load_balancer_is_required
 
-- hosts: sonar
+
 - name: sonar assignment
+  hosts: sonar
   ansible.builtin.import_playbook: ../static-assignments/sonar.yml
